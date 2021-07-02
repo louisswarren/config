@@ -1,0 +1,15 @@
+font:
+  normal:
+    family: DejaVu Sans Mono
+    style: Book
+
+  bold:
+    style: Bold
+
+  italic:
+    style: Oblique
+
+  bold_italic:
+    style: Bold Oblique
+
+  size: 14.0
