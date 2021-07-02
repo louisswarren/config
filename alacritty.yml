@@ -1,3 +1,6 @@
+import:
+  - ~/.config/base16-alacritty/colors/base16-gruvbox-dark-hard.yml
+
 font:
   normal:
     family: DejaVu Sans Mono
