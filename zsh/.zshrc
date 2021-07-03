@@ -8,7 +8,7 @@ fi
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 
-zstyle ':completion:*' cache-path ~/.cache/zsh/zcompcache
+zstyle ':completion:*' cache-path $XDG_CACHE_HOME/zsh/zcompcache
 zstyle ':completion:*' completer _complete _ignored _approximate
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]}'
 zstyle :compinstall filename '/home/louis/.zshrc'
@@ -16,7 +16,7 @@ zstyle ':completion:*:*:vim:*' file-patterns '^*.(aux|log|pdf|agdai):source-file
 zstyle ':completion:*:*:gvim:*' file-patterns '^*.(aux|log|pdf|agdai):source-files' '*:all-files'
 
 autoload -Uz compinit
-compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
+compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
