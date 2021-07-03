@@ -1,10 +1,13 @@
 /* Adapted from https://hg.sr.ht/~begs/dotfiles */
 
+@import "../base16-waybar/colors/base16-gruvbox-dark-hard.css";
+
 /* Gruvbox */
 @define-color light #ebdbb2;
 @define-color dark #282828;
 @define-color warning #fabd2f;
 @define-color critical #cc241d;
+
 @define-color mode #a89984;
 @define-color workspaces #458588;
 @define-color workspacesfocused #83a598;
@@ -19,25 +22,13 @@
 @define-color time #ebdbb2;
 
 @keyframes blink-warning {
-	70% {
-		color: @light;
-	}
-
-	to {
-		color: @light;
-		background-color: @warning;
-	}
+	70% {color: @light;                            }
+	to  {color: @light; background-color: @warning;}
 }
 
 @keyframes blink-critical {
-	70% {
-		color: @light;
-	}
-
-	to {
-		color: @light;
-		background-color: @critical;
-	}
+	70% {color: @light;                             }
+	to  {color: @light; background-color: @critical;}
 }
 
 /* Reset all styles */
@@ -66,8 +57,7 @@
 #pulseaudio,
 #custom-alsa,
 #tray {
-	padding-left: 10px;
-	padding-right: 10px;
+	padding: 0 10px;
 }
 /* Blinking */
 #mode,
@@ -99,95 +89,42 @@
 	animation-duration: 3s;
 }
 
-
-/* Modules in order */
-
-#workspaces button {
-	padding-left: 5px;
-	padding-right: 5px;
-	color: @dark;
-	background: @workspaces;
-}
-
-#workspaces button.focused {
-	background: @workspacesfocused;
-}
-
+/* Arrows */
+#custom-arrow-battery,
+#custom-arrow-clock-date,
+#custom-arrow-clock-time,
+#custom-arrow-network,
+#custom-arrow-pulse,
 #custom-arrow-workspaces {
 	font-size: 16px;
-	color: @workspaces;
-	background: transparent;
+}
+
+/* Colours */
+
+#custom-arrow-workspaces {color:      @workspaces; background: transparent;}
+
+#workspaces button         {background: @workspaces;        color: @dark; }
+#workspaces button.focused {background: @workspacesfocused; color: @dark; }
+#mode                      {background: @mode;              color: @light;}
+
+
+#custom-arrow-pulse      {background: transparent; color:      @sound;     }
+#custom-arrow-network    {background: @sound;      color:      @network;   }
+#custom-arrow-battery    {background: @network;    color:      @battery;   }
+#custom-arrow-clock-date {background: @battery;    color:      @date;      }
+#custom-arrow-clock-time {background: @date;       color:      @time;      }
+
+#pulseaudio { background: @sound;   color: @dark; }
+#network    { background: @network; color: @light;}
+#battery    { background: @battery; color: @dark; }
+#tray       { background: @date;    color: @light;}
+#clock.date { background: @date;    color: @light;}
+#clock.time { background: @time;    color: @dark; }
+
+#workspaces button {
+	padding: 0 5px;
 }
 
 #window {
-	margin-right: 40px;
-	margin-left: 40px;
-}
-
-#mode {
-	color: @light;
-	background: @mode;
-}
-
-#custom-arrow-pulse {
-	font-size: 16px;
-	color: @sound;
-	background: transparent;
-}
-
-#pulseaudio {
-	background: @sound;
-	color: @dark
-}
-
-#pulseaudio.muted {
-	/* No styles */
-}
-
-#custom-arrow-network {
-	font-size: 16px;
-	color: @network;
-	background: @sound;
-}
-
-#network {
-	background: @network;
-	color: @light;
-}
-
-#custom-arrow-battery {
-	font-size: 16px;
-	color: @battery;
-	background: @network;
-}
-
-#battery {
-	background: @battery;
-	color: @dark;
-}
-
-#custom-arrow-clock-date {
-	font-size: 16px;
-	color: @date;
-	background: @battery;
-}
-
-#tray {
-	background: @date;
-}
-
-#clock.date {
-	background: @date;
-	color: @light;
-}
-
-#custom-arrow-clock-time {
-	font-size: 16px;
-	color: @time;
-	background: @date;
-}
-
-#clock.time {
-	background: @time;
-	color: @dark;
+	margin: 0 40px;
 }
