@@ -16,7 +16,8 @@ zstyle ':completion:*:*:vim:*' file-patterns '^*.(aux|log|pdf|agdai):source-file
 zstyle ':completion:*:*:gvim:*' file-patterns '^*.(aux|log|pdf|agdai):source-files' '*:all-files'
 
 autoload -Uz compinit
-compinit
+compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
+
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
 #HISTFILE=~/.histfile
@@ -63,8 +64,6 @@ if [[ $1 == vim ]]; then
 	"$@"
 	set --
 fi
-
-compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/zsh/p10k.zsh ]] || source ~/.config/zsh/p10k.zsh
