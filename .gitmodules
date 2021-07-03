@@ -1,3 +1,6 @@
 [submodule "base16-alacritty"]
 	path = base16-alacritty
 	url = https://github.com/aarowill/base16-alacritty
+[submodule "base16-sway"]
+	path = base16-sway
+	url = https://github.com/rkubosz/base16-sway

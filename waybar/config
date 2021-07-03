@@ -1,23 +1,13 @@
-// =============================================================================
-//
-// Waybar configuration (https://hg.sr.ht/~begs/dotfiles)
-//
-// Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
-//
-// =============================================================================
+// Adapted from https://hg.sr.ht/~begs/dotfiles
 
 {
-	// -------------------------------------------------------------------------
-	// Global configuration
-	// -------------------------------------------------------------------------
-
 	"layer": "top",
 	"position": "bottom",
 	"height": 21,
 
 	"modules-left": [
 		"sway/workspaces",
-		"custom/arrow10",
+		"custom/arrow-workspaces",
 	],
 
 	"modules-center": [
@@ -26,30 +16,18 @@
 	],
 
 	"modules-right": [
-		"custom/arrow1",
+		"custom/arrow-pulse",
 		"pulseaudio",
-		"custom/arrow2",
+		"custom/arrow-network",
 		"network",
-		//"custom/arrow3",
-		//"memory",
-		//"custom/arrow4",
-		//"cpu",
-		//custom/arrow5",
-		//temperature",
-		//custom/arrow6",
-		//"sway/language",
-		"custom/arrow7",
+		"custom/arrow-battery",
 		"battery",
-		"custom/arrow8",
+		"custom/arrow-clock-date",
 		"tray",
 		"clock#date",
-		"custom/arrow9",
+		"custom/arrow-clock-time",
 		"clock#time"
 	],
-
-	// -------------------------------------------------------------------------
-	// Modules
-	// -------------------------------------------------------------------------
 
 	"battery": {
 		"interval": 1,
@@ -83,25 +61,6 @@
 		"tooltip": true
 	},
 
-	"cpu": {
-		"interval": 5,
-		"tooltip": false,
-		"format": " {usage}%", // Icon: microchip
-		"states": {
-		  "warning": 70,
-		  "critical": 90
-		}
-	},
-
-	"memory": {
-		"interval": 5,
-		"format": " {}%", // Icon: memory
-		"states": {
-			"warning": 70,
-			"critical": 90
-		}
-	},
-
 	"network": {
 		"interval": 5,
 		"format-wifi": " {essid}", // Icon: wifi
@@ -110,6 +69,22 @@
 		"format-disconnected": "Offline",
 		"format-disabled": "",
 		"tooltip": true,
+	},
+
+	"pulseaudio": {
+		"scroll-step": 1,
+		"format": "{icon} {volume}%",
+		"format-bluetooth": "{icon} {volume}%",
+		"format-muted": " {volume}%",
+		"format-icons": {
+			"headphones": "",
+			"handsfree": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", ""]
+		},
 	},
 
 	"sway/mode": {
@@ -129,75 +104,16 @@
 		"format": "{value}",
 	},
 
-	"pulseaudio": {
-		"scroll-step": 1,
-		"format": "{icon} {volume}%",
-		"format-bluetooth": "{icon} {volume}%",
-		"format-muted": " {volume}%",
-		"format-icons": {
-			"headphones": "",
-			"handsfree": "",
-			"headset": "",
-			"phone": "",
-			"portable": "",
-			"car": "",
-			"default": ["", ""]
-		},
-//		"on-click": "pavucontrol"
-	},
-
 	"tray": {
 		"icon-size": 21
 		//"spacing": 10
 	},
 
-	"custom/arrow1": {
-		"format": "",
-		"tooltip": false
-	},
+	"custom/arrow-pulse":      {"format": "", "tooltip": false},
+	"custom/arrow-network":    {"format": "", "tooltip": false},
+	"custom/arrow-battery":    {"format": "", "tooltip": false},
+	"custom/arrow-clock-date": {"format": "", "tooltip": false},
+	"custom/arrow-clock-time": {"format": "", "tooltip": false},
 
-	"custom/arrow2": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrow3": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrow4": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrow5": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrow6": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrow7": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrow8": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrow9": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrow10": {
-		"format": "",
-		"tooltip": false
-	}
+	"custom/arrow-workspaces": {"format": "", "tooltip": false},
 }
