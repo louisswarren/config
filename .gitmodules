@@ -7,3 +7,6 @@
 [submodule "base16-waybar"]
 	path = base16-waybar
 	url = https://github.com/mnussbaum/base16-waybar
+[submodule "base16-qutebrowser"]
+	path = base16-qutebrowser
+	url = https://github.com/theova/base16-qutebrowser
