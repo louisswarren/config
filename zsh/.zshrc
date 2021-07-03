@@ -7,6 +7,8 @@ fi
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
+
+zstyle ':completion:*' cache-path ~/.cache/zsh/zcompcache
 zstyle ':completion:*' completer _complete _ignored _approximate
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]}'
 zstyle :compinstall filename '/home/louis/.zshrc'
@@ -17,7 +19,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+#HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 unsetopt beep
@@ -61,6 +63,8 @@ if [[ $1 == vim ]]; then
 	"$@"
 	set --
 fi
+
+compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
