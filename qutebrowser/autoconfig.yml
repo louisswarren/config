@@ -17,6 +17,8 @@ settings:
     global: '#7851a9'
   content.autoplay:
     global: false
+  content.notifications.enabled:
+    global: false
   editor.command:
     global:
     - alacritty
