@@ -13,8 +13,6 @@ settings:
         ',e': edit-text
         ',r': spawn --userscript oldreddit
         ',y': hint links userscript youtube
-  colors.statusbar.private.bg:
-    global: '#7851a9'
   content.autoplay:
     global: false
   content.notifications.enabled:
