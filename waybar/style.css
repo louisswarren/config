@@ -13,6 +13,7 @@
 @define-color mode          @base0F;
 @define-color sound         @base0E;
 @define-color network       @base0D;
+@define-color backlight     @base0F;
 @define-color battery       @base0A;
 @define-color date          @base0C;
 @define-color time          @base0B;
@@ -46,6 +47,7 @@
 }
 
 /* All modules */
+#backlight,
 #battery,
 #clock,
 #mode,
@@ -86,6 +88,7 @@
 }
 
 /* Arrows */
+#custom-arrow-backlight,
 #custom-arrow-battery,
 #custom-arrow-clock-date,
 #custom-arrow-clock-time,
@@ -103,18 +106,20 @@
 #workspaces button.focused {background: @thisworkspace; color: @dark; }
 #mode                      {background: @mode;          color: @light;}
 
-#custom-arrow-pulse      {background: @barbg;   color: @sound;  }
-#custom-arrow-network    {background: @sound;   color: @network;}
-#custom-arrow-battery    {background: @network; color: @battery;}
-#custom-arrow-clock-date {background: @battery; color: @date;   }
-#custom-arrow-clock-time {background: @date;    color: @time;   }
+#custom-arrow-pulse      {background: @barbg;     color: @sound;  }
+#custom-arrow-network    {background: @sound;     color: @network;}
+#custom-arrow-backlight  {background: @network;   color: @backlight;}
+#custom-arrow-battery    {background: @backlight; color: @battery;}
+#custom-arrow-clock-date {background: @battery;   color: @date;   }
+#custom-arrow-clock-time {background: @date;      color: @time;   }
 
-#pulseaudio { background: @sound;   color: @dark; }
-#network    { background: @network; color: @dark;}
-#battery    { background: @battery; color: @dark; }
-#tray       { background: @date;    color: @dark;}
-#clock.date { background: @date;    color: @dark;}
-#clock.time { background: @time;    color: @dark; }
+#pulseaudio { background: @sound;     color: @dark;}
+#network    { background: @network;   color: @dark;}
+#battery    { background: @battery;   color: @dark;}
+#backlight  { background: @backlight; color: @dark;}
+#tray       { background: @date;      color: @dark;}
+#clock.date { background: @date;      color: @dark;}
+#clock.time { background: @time;      color: @dark;}
 
 #workspaces button {
 	padding: 0 7px;

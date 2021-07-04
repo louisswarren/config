@@ -20,6 +20,8 @@
 		"pulseaudio",
 		"custom/arrow-network",
 		"network",
+		"custom/arrow-backlight",
+		"backlight",
 		"custom/arrow-battery",
 		"battery",
 		"custom/arrow-clock-date",
@@ -28,6 +30,12 @@
 		"custom/arrow-clock-time",
 		"clock#time"
 	],
+
+	"backlight": {
+		"device": "intel_backlight",
+		"format": "{icon} {percent}%",
+		"format-icons": ["", ""]
+	},
 
 	"battery": {
 		"interval": 1,
@@ -111,6 +119,7 @@
 
 	"custom/arrow-pulse":      {"format": "", "tooltip": false},
 	"custom/arrow-network":    {"format": "", "tooltip": false},
+	"custom/arrow-backlight":  {"format": "", "tooltip": false},
 	"custom/arrow-battery":    {"format": "", "tooltip": false},
 	"custom/arrow-clock-date": {"format": "", "tooltip": false},
 	"custom/arrow-clock-time": {"format": "", "tooltip": false},
