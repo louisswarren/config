@@ -53,6 +53,8 @@ alias maxima='rlwrap maxima'
 
 alias await='watch -g ps -opid -p'
 
+alias dff='df -x tmpfs -x devtmpfs -h'
+
 alias ..='cd ..'
 alias ...='cd ...'
 alias ....='cd ....'
