@@ -29,6 +29,8 @@ bindkey -v
 
 DEFAULT_USER=louis
 
+ZLE_RPROMPT_INDENT=0
+
 bindkey -M viins 'jk' vi-cmd-mode
 bindkey '^R' history-incremental-search-backward
 
