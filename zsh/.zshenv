@@ -8,4 +8,5 @@ export      INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
 export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export  RLWRAP_HOME="$XDG_STATE_HOME"/rlwrap
 export      VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
+export      XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export      ZDOTDIR="$XDG_CONFIG_HOME"/zsh
