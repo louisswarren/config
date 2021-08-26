@@ -18,4 +18,6 @@ xbindkeys -f "$XDG_CONFIG_HOME"/xbindkeys/config
 xmodmap ~/.Xmodmap &
 xset -b &
 
+while true; do alacritty --class scratch; done &
+
 exec i3
