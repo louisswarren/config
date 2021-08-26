@@ -10,3 +10,6 @@
 [submodule "base16-qutebrowser"]
 	path = base16-qutebrowser
 	url = https://github.com/theova/base16-qutebrowser
+[submodule "base16-zathura"]
+	path = base16-zathura
+	url = https://github.com/HaoZeke/base16-zathura.git
