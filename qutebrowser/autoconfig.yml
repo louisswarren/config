@@ -27,6 +27,8 @@ settings:
     - '{file}'
   fonts.default_size:
     global: 12pt
+  downloads.position:
+    global: bottom
   fonts.web.size.default:
     global: 18
   fonts.web.size.minimum:
