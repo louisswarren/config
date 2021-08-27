@@ -249,6 +249,7 @@ imap <buffer> Gamma3 Γ₃
 imap <buffer> \reduces ⊃
 imap <buffer> reduces ⊃
 
+imap <buffer> \prec ≼
 imap <buffer> \sprec ≺
 imap <buffer> \succ ≽
 imap <buffer> \ssucc ≻
