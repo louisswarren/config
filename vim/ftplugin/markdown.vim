@@ -210,3 +210,5 @@ imap <buffer> \tdown ▼
 
 imap <buffer> \?? ⁇
 imap <buffer> \sq □
+
+imap <buffer> \bot ⊥
