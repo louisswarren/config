@@ -15,4 +15,6 @@ font:
   bold_italic:
     style: Bold Oblique
 
-  size: 14.0
+HOST_TURING(
+`  size: 14.0',
+`  size: 12.0')
