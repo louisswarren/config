@@ -10,7 +10,9 @@ settings:
     global:
       normal:
         ',Y': spawn --userscript youtube
+        ',do': download-open
         ',e': edit-text
+        ',m': hint links userscript youtube-audio
         ',r': spawn --userscript oldreddit
         ',y': hint links userscript youtube
   content.autoplay:
