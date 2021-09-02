@@ -19,6 +19,8 @@ settings:
     global: false
   content.notifications.enabled:
     global: false
+  downloads.position:
+    global: bottom
   editor.command:
     global:
     - alacritty
