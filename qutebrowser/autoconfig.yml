@@ -27,16 +27,8 @@ settings:
     - -e
     - vim
     - '{file}'
-  fonts.default_size:
-    global: 12pt
   downloads.position:
     global: bottom
-  fonts.web.size.default:
-    global: 18
-  fonts.web.size.minimum:
-    global: 16
-  qt.highdpi:
-    global: true
   tabs.title.format:
     global: '{index}: {current_title}'
   url.searchengines:
