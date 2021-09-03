@@ -113,7 +113,7 @@
 
 #Clipyt
 "clipyt"
-   Mod4 + c
+   Mod4 + y
 
 #Nemo
 "nemo"
@@ -130,6 +130,10 @@
 #Wikipedia search
 "wikipedia"
    Mod4 + w
+
+#Configure
+"configure"
+   Mod4 + c
 
 #Pavucontrol
 "pavucontrol --class floating"
