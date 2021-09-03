@@ -10,10 +10,12 @@ makeaposix:
 
 %: %.m4
 	@echo "make $@"
-	@echo 'm4_divert(-1)' \
-	      'm4_define(HOST, m4_esyscmd(`uname -n | tr -d "\n"'"'"'))' \
-	      'm4_define(`HOST_PLATO'"'"', `m4_ifelse(HOST, `plato'"'"', `$$1'"'"', `$$2'"'"')'"'"')' \
-	      'm4_define(`HOST_EULER'"'"', `m4_ifelse(HOST, `euler'"'"', `$$1'"'"', `$$2'"'"')'"'"')' \
-	      'm4_define(`HOST_TURING'"'"', `m4_ifelse(HOST, `turing'"'"', `$$1'"'"', `$$2'"'"')'"'"')' \
+	@echo "m4_divert(-1)" \
+	      "m4_define(HOST, \`$$(uname -n)')" \
+	      "m4_define(\`HOST_PLATO',  \`m4_ifelse(HOST, \`plato',  \`\$$1', \`\$$2')')" \
+	      "m4_define(\`HOST_EULER',  \`m4_ifelse(HOST, \`euler',  \`\$$1', \`\$$2')')" \
+	      "m4_define(\`HOST_TURING', \`m4_ifelse(HOST, \`turing', \`\$$1', \`\$$2')')" \
 	      'm4_divert(0)m4_dnl' \
 	    | m4 --prefix-builtins - "$<" > "$@"
+
+#	[ -x "$<" ] && chmod +x "$@"
