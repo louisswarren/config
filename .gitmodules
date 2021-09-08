@@ -13,3 +13,6 @@
 [submodule "base16-zathura"]
 	path = base16-zathura
 	url = https://github.com/HaoZeke/base16-zathura.git
+[submodule "base16-xresources"]
+	path = base16-xresources
+	url = https://github.com/base16-templates/base16-xresources
