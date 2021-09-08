@@ -149,10 +149,18 @@ noremap <Down> 2<C-e>
 
 
 " Copy and paste
-nnoremap <leader>c y:call system("wl-copy", @")<cr>
-vnoremap <leader>c y:call system("wl-copy", @")<cr>
-nnoremap <leader>v :let @"=substitute(system("wl-paste --no-newline 2>/dev/null"), '<C-v><C-m>', '', 'g')<cr>p
-nnoremap <leader>V :let @"=substitute(system("wl-paste --no-newline 2>/dev/null"), '<C-v><C-m>', '', 'g')<cr>P
+if hostname() == "turing"
+	nnoremap <leader>c y:call system("wl-copy", @")<cr>
+	vnoremap <leader>c y:call system("wl-copy", @")<cr>
+	nnoremap <leader>v :let @"=substitute(system("wl-paste --no-newline 2>/dev/null"), '<C-v><C-m>', '', 'g')<cr>p
+	nnoremap <leader>V :let @"=substitute(system("wl-paste --no-newline 2>/dev/null"), '<C-v><C-m>', '', 'g')<cr>P
+else
+	nnoremap <leader>c "+y
+	vnoremap <leader>c "+y
+	nnoremap <leader>v "+p
+	nnoremap <leader>V "+P
+endif
+
 
 " Splits for emacs haters
 nnoremap <C-j> <C-W><C-J>
