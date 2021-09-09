@@ -16,3 +16,6 @@
 [submodule "base16-xresources"]
 	path = base16-xresources
 	url = https://github.com/base16-templates/base16-xresources
+[submodule "base16-dunst"]
+	path = base16-dunst
+	url = https://github.com/khamer/base16-dunst.git
