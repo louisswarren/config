@@ -17,7 +17,15 @@ settings:
         ',y': hint links userscript youtube
   content.autoplay:
     global: false
+  content.fullscreen.overlay_timeout:
+    global: 0
+  content.fullscreen.window:
+    global: true
+  content.geolocation:
+    global: false
   content.notifications.enabled:
+    global: false
+  content.register_protocol_handler:
     global: false
   downloads.position:
     global: bottom
