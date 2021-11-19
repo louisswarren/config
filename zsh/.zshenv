@@ -10,5 +10,6 @@ export PYTHONSTARTUP="$XDG_CONFIG_HOME"/python/startup.py
 export   RLWRAP_HOME="$XDG_STATE_HOME"/rlwrap
 export       VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 export        WGETRC="$XDG_CONFIG_HOME"/wget/wgetrc
+export    XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export       XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export       ZDOTDIR="$XDG_CONFIG_HOME"/zsh
