@@ -14,6 +14,7 @@ mkdir -p $(dirname -- "$LESSHISTFILE")
 mkdir -p $(dirname -- "$PYTHONSTARTUP")
 mkdir -p $(dirname -- "$RLWRAP_HOME")
 mkdir -p $(dirname -- "$ZDOTDIR")
+mkdir -p "$TEXMFVAR"
 
 # Create other directories used in vimenv
 mkdir -p  "$XDG_CACHE_HOME/vim"
