@@ -8,6 +8,7 @@ export       INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
 export  LESSHISTFILE="$XDG_STATE_HOME"/less/history
 export PYTHONSTARTUP="$XDG_CONFIG_HOME"/python/startup.py
 export   RLWRAP_HOME="$XDG_STATE_HOME"/rlwrap
+export      SSB_HOME="$XDG_DATA_HOME"/zoom
 export       VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 export        WGETRC="$XDG_CONFIG_HOME"/wget/wgetrc
 export    XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
