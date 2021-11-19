@@ -2,6 +2,10 @@ import atexit
 import os
 import readline
 
+# Can do away with this once
+# https://github.com/python/cpython/pull/13208
+# is merged (any day now ...)
+
 if 'PYTHONHISTORY' in os.environ:
     histfile = os.path.expanduser(os.environ['PYTHONHISTORY'])
 elif 'XDG_STATE_HOME' in os.environ:
