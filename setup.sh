@@ -11,6 +11,7 @@ mkdir -p "$XDG_CACHE_HOME"
 mkdir -p $(dirname -- "$HISTFILE")
 mkdir -p $(dirname -- "$INPUTRC")
 mkdir -p $(dirname -- "$LESSHISTFILE")
+mkdir -p $(dirname -- "$PYTHONSTARTUP")
 mkdir -p $(dirname -- "$RLWRAP_HOME")
 mkdir -p $(dirname -- "$ZDOTDIR")
 
