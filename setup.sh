@@ -2,18 +2,15 @@ ln -s "$(dirname -- "$(pwd)/$0")/zsh/.zshenv" "$HOME/.zshenv"
 source "$HOME/.zshenv"
 
 # Create XDG directories
-mkdir -p "$XDG_CONFIG_HOME"
 mkdir -p "$XDG_DATA_HOME"
 mkdir -p "$XDG_STATE_HOME"
 mkdir -p "$XDG_CACHE_HOME"
 
 # Create other directories used in .zshenv
 mkdir -p $(dirname -- "$HISTFILE")
-mkdir -p $(dirname -- "$INPUTRC")
 mkdir -p $(dirname -- "$LESSHISTFILE")
 mkdir -p $(dirname -- "$PYTHONSTARTUP")
-mkdir -p $(dirname -- "$RLWRAP_HOME")
-mkdir -p $(dirname -- "$ZDOTDIR")
+mkdir -p "$RLWRAP_HOME"
 mkdir -p "$TEXMFVAR"
 
 # Create other directories used in vimenv
