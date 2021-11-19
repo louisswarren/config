@@ -17,7 +17,8 @@ fi
 ./.fehbg &
 udiskie &
 xbindkeys -f "$XDG_CONFIG_HOME"/xbindkeys/config
-xmodmap ~/.Xmodmap &
+xmodmap "$XDG_CONFIG_HOME"/X11/xmodmap &
+xrdb -load "$XDG_CONFIG_HOME"/X11/xresources
 xset -b &
 
 while true; do alacritty --class scratch; done &
