@@ -178,8 +178,8 @@ nnoremap <leader>? ??<cr>:nohl<cr>
 nnoremap <leader>f 0yWo<esc>pA
 nnoremap <leader>F 0y2Wo<esc>pA
 
-nnoremap <leader>ic o...<space>\|<space>c<space>=<space>{! c !}<esc>3h:Reload<cr>:call MakeCase()<cr>
-nnoremap <leader>i2c o...<space>\|<space>c<space>\|<space>d<space>=<space>{! c d !}<esc>3h:Reload<cr>:call MakeCase()<cr>
+nnoremap <leader>ic o...<space>\|<space>c<space>=<space>{! c !}<esc>3h:AgdaReload<cr>:call AgdaMakeCase()<cr>
+nnoremap <leader>i2c o...<space>\|<space>c<space>\|<space>d<space>=<space>{! c d !}<esc>3h:AgdaReload<cr>:call AgdaMakeCase()<cr>
 nnoremap <leader>. 0R...<esc>lvt\|r<space>f\|
 
 vnoremap <leader>= :Tabularize /=<cr>
