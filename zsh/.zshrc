@@ -56,8 +56,8 @@ alias await='watch -g ps -opid -p'
 alias dff='df -x tmpfs -x devtmpfs -h'
 
 alias ..='cd ..'
-alias ...='cd ...'
-alias ....='cd ....'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 
 # stty -ixon
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
