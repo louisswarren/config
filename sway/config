@@ -1,3 +1,5 @@
+include ~/.config/base16-sway/themes/base16-gruvbox-dark-hard.config
+
 set $mod Mod4
 set $super Mod4+Shift
 
@@ -31,10 +33,12 @@ set $ws10 "10:fullmax"
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu bemenu-run | xargs swaymsg exec --
+set $menu bemenu-run --nb=$base01 --nf=$base04 --sb=$base0D --sf=$base00 | xargs swaymsg exec --
+
 
 ### Output configuration
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/christchurch1906.png fill
 output * scale 1
 
 ### Idle configuration
@@ -199,6 +203,11 @@ for_window [app_id="scratch"]   move to scratchpad
 for_window [instance="floating"]  floating enable
 for_window [class="floating"]  floating enable
 for_window [class="mpv" floating] border pixel 0
+for_window [app_id="zoom"] floating enable
+
+for_window [class="wlfreerdp"]   move to workspace $ws8
+for_window [class="wlfreerdp"]   fullscreen enable
+
 focus_follows_mouse no
 
 workspace $ws1  output $monitor
@@ -213,8 +222,6 @@ workspace $ws9  output $monitor
 workspace $ws10 output $externalmonitor
 
 focus_on_window_activation urgent
-
-include ~/.config/base16-sway/themes/base16-gruvbox-dark-hard.config
 
 # Basic color configuration using the Base16 variables for windows and borders.
 # Property Name         Border  BG      Text    Indicator Child Border
