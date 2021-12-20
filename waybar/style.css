@@ -4,9 +4,9 @@
 
 @define-color light    @base07;
 @define-color dark     @base00;
-@define-color barbg    @base01;
-@define-color warning  @base0A;
-@define-color critical @base08;
+@define-color barbg    transparent;
+@define-color warning  @base0E;
+@define-color critical @base0F;
 
 @define-color workspaces    @base0D;
 @define-color thisworkspace @base0A;
@@ -19,13 +19,13 @@
 @define-color time          @base0B;
 
 @keyframes blink-warning {
-	70% {color: @light;                            }
-	to  {color: @light; background-color: @warning;}
+	70% {color: @dark; }
+	to  {color: @warning; }
 }
 
 @keyframes blink-critical {
-	70% {color: @light;                             }
-	to  {color: @light; background-color: @critical;}
+	70% {color: @dark;     }
+	to  {color: @dark; background: @base0F; }
 }
 
 /* Reset all styles */
@@ -40,7 +40,7 @@
 /* The whole bar */
 #waybar {
 	background: @barbg;
-	color: @light;
+	color: @dark;
 	font-family: DejaVu Sans, FreeSerif;
 	font-size: 10pt;
 	font-weight: bold;
@@ -84,7 +84,7 @@
 /* Warning blinking */
 #battery.warning.discharging {
 	animation-name: blink-warning;
-	animation-duration: 3s;
+	animation-duration: 4s;
 }
 
 /* Arrows */
