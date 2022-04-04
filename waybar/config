@@ -57,7 +57,7 @@
 
 	"clock#time": {
 		"interval": 1,
-		"format": "{:%-l:%M %P}",
+		"format": "{:%I:%M}",
 		"tooltip-format": "{:%H:%M:%S}",
 		"tooltip": true
 	},
