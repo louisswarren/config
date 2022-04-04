@@ -126,6 +126,8 @@ bindsym $mod+Shift+e      exec swaynag -t warning -m 'Exit Sway?.' -b 'Yes ' 'sw
 bindsym $mod+d exec       $menu
 bindsym $mod+Return       exec $term
 bindsym $mod+Shift+w      exec qutebrowser
+bindsym $super+p          exec mediaplay
+bindsym $super+c          exec configure
 
 # Moving / resizing floading windows
 floating_modifier $mod normal
