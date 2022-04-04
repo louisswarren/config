@@ -213,5 +213,3 @@ set wildignore+=*.pdf,*.o,*.obj,*.jpg,*.png,*.agdai
 set wildmenu
 
 set display+=lastline
-
-set relativenumber
