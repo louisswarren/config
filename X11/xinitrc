@@ -9,9 +9,10 @@ fi
 
 if [ $(uname -n) = euler ]; then
 	msens "USB OPTICAL MOUSE " -0.9
+	msens 'Logitech G305' -0.7
 	setxkbmap -option numpad:mac us
 	xrandr --output DP-0 --primary --auto --mode 2560x1440 --rate 120
-	xrandr --output DVI-I-0 --left-of DP-0 --mode 1280x1024 --rate 75
+	xrandr --output DVI-D-0 --left-of DP-0 --mode 1920x1080 --rotate left
 fi
 
 ./.fehbg &
