@@ -1,2 +1,5 @@
 include ../base16-zathura/build_schemes/colors/base16-gruvbox-dark-hard.config
+
+set selection-clipboard clipboard
 set window-title-home-tilde true
+set statusbar-home-tilde true

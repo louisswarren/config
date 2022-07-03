@@ -14,7 +14,9 @@ settings:
         ',e': edit-text
         ',m': hint links userscript youtube-audio
         ',r': spawn --userscript oldreddit
+        ',v': spawn --userscript novideo
         ',y': hint links userscript youtube
+        <Ctrl+a>: mode-enter insert
   content.autoplay:
     global: false
   content.fullscreen.overlay_timeout:
