@@ -15,6 +15,10 @@ font:
   bold_italic:
     style: Bold Oblique
 
-HOST_TURING(
-`  size: 14.0',
-`  size: 12.0')
+HOST_EULER(`
+  size: 12.0
+')HOST_PLATO(`
+  size: 8.0
+')HOST_TURING(`
+  size: 14.0
+')
