@@ -27,6 +27,7 @@ Plug 'godlygeek/tabular'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'tpope/vim-surround'
 Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
+Plug 'jpalardy/vim-slime'
 call plug#end()
 
 let g:vimtex_latexmk_callback=0
@@ -136,6 +137,7 @@ noremap <F8> :tabnext<CR>
 noremap <F1> <Nop>
 
 nnoremap <F10> :!make<CR>
+nnoremap <F11> :make<CR>:cw<CR>
 
 " Clear highlight search
 nnoremap <silent> <F2> :nohl<CR><F2>
