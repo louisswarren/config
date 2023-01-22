@@ -41,7 +41,7 @@
 #waybar {
 	background: @barbg;
 	color: @dark;
-	font-family: DejaVu Sans, FreeSerif;
+	font-family: DejaVu Sans, Source Code Pro Light;
 	font-size: 10pt;
 	font-weight: bold;
 }
