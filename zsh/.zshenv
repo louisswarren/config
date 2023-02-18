@@ -15,3 +15,5 @@ export        WGETRC="$XDG_CONFIG_HOME"/wget/wgetrc
 export    XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export       XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export       ZDOTDIR="$XDG_CONFIG_HOME"/zsh
+
+eval $(keychain --eval --quiet id_ed25519)
