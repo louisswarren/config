@@ -13,12 +13,13 @@
 [submodule "base16-zathura"]
 	path = base16-zathura
 	url = https://github.com/HaoZeke/base16-zathura.git
-[submodule "base16-xresources"]
-	path = base16-xresources
-	url = https://github.com/tinted-theming/base16-xresources.git
 [submodule "base16-dunst"]
 	path = base16-dunst
 	url = https://github.com/khamer/base16-dunst.git
 [submodule "base16-mako"]
 	path = base16-mako
 	url = https://github.com/stacyharper/base16-mako.git
+[submodule "base16-xresources"]
+	path = base16-xresources
+	url = https://github.com/tinted-theming/base16-xresources.git
+	branch = main
