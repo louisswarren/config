@@ -5,7 +5,7 @@ M4OBJ := $(patsubst %.m4,%,$(M4SRC))
 makegnu: $(M4OBJ)
 
 .PHONY: makeposix
-makeaposix:
+makeposix:
 	find -name '*.m4' | while read -r fname; do echo "$${fname%.m4}"; done | xargs $(MAKE)
 
 %: %.m4
