@@ -1,6 +1,8 @@
 nnoremap <buffer><F5> :!./%.vimout<CR>
 nnoremap <buffer><F9> :w<CR>:!clear<CR>:!gcc -o %.vimout -Wall -std=c99 %<CR>:!./%.vimout<CR>:!rm %.vimout<CR>
 
+nnoremap <F10> :!make CFLAGS="$(xargs echo < ~/.config/cflags.txt)"<CR>
+
 set tabstop=8
 set shiftwidth=8
 set softtabstop=8
