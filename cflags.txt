@@ -1,19 +1,17 @@
--Wpedantic
--pedantic-errors
--fmax-errors=2
 -Wall
--Wextra
--fanalyzer
 -Warray-bounds=2
 -Wcast-align=strict
 -Wcast-qual
+-Wconversion -Wno-sign-conversion
 -Wdangling-else
 -Wdate-time
 -Wdouble-promotion
--Wformat=2
+-Wextra
+-Wfloat-conversion
 -Wformat-overflow=2
 -Wformat-signedness
 -Wformat-truncation=2
+-Wformat=2
 -Winit-self
 -Wjump-misses-init
 -Wlogical-op
@@ -21,10 +19,13 @@
 -Wnested-externs
 -Wnull-dereference
 -Wpacked
+-Wpedantic
 -Wredundant-decls
 -Wshadow
+-Wshift-negative-value
 -Wshift-overflow=2
--Wstrict-overflow=5
+-Wstrict-aliasing
+-Wstrict-overflow=2
 -Wstrict-prototypes
 -Wstringop-overflow=4
 -Wstringop-truncation
@@ -33,12 +34,8 @@
 -Wuninitialized
 -Wunsafe-loop-optimizations
 -Wunused
--Wunused-const-variable=2
--Wunused-parameter
 -Wuse-after-free=3
 -Wwrite-strings
--Wshift-negative-value
--Wstrict-aliasing
--Wstrict-overflow=2
--Wfloat-conversion
--Wconversion -Wno-sign-conversion
+-fanalyzer
+-fmax-errors=2
+-pedantic-errors
