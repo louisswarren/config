@@ -3,6 +3,9 @@ nnoremap <buffer><f5> :!python3 -i "%"<cr>
 setlocal expandtab
 nnoremap <f6> i"""<esc>:r! python3 %<cr>o"""<esc>
 
+noreabbrev definit def __init__(self):
+noreabbrev ifmain if __name__ == '__main__':
+
 " Adapted from agda-vim
 " https://github.com/derekelkins/agda-vim
 function! LogPython()
