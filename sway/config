@@ -1,7 +1,9 @@
 include ~/.config/base16-sway/themes/base16-gruvbox-dark-hard.config
 
-set $mod Mod4
-set $super Mod4+Shift
+set $mod Mod2
+set $super Mod2+Shift
+
+set $win Mod4
 
 set $monitor eDP-1
 set $externalmonitor unknown
@@ -60,7 +62,7 @@ seat * hide_cursor when-typing enable
 
 ### Input configuration
 input "1:1:AT_Translated_Set_2_keyboard" {
-	xkb_options caps:hyper
+	xkb_options caps:numlock
 }
 
 input "2:10:TPPS/2_IBM_TrackPoint" {
