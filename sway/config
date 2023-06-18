@@ -1,9 +1,7 @@
 include ~/.config/base16-sway/themes/base16-gruvbox-dark-hard.config
 
-set $mod Mod2
-set $super Mod2+Shift
-
-set $win Mod4
+set $mod Mod4
+set $super Mod4+Shift
 
 set $monitor eDP-1
 set $externalmonitor unknown
@@ -62,7 +60,7 @@ seat * hide_cursor when-typing enable
 
 ### Input configuration
 input "1:1:AT_Translated_Set_2_keyboard" {
-	xkb_options caps:numlock
+	xkb_options caps:hyper
 }
 
 input "2:10:TPPS/2_IBM_TrackPoint" {
@@ -83,11 +81,11 @@ bindsym XF86AudioLowerVolume  exec pamixer --decrease 5 --allow-boost
 bindsym XF86AudioMute         exec pamixer --toggle-mute
 bindsym Shift+XF86AudioMute   exec pavucontrol
 
-# T420 function keys on other devices using win
-bindsym $win+Left          exec playerctl previous
-bindsym $win+Right         exec playerctl next
-bindsym $win+Up            exec playerctl stop
-bindsym $win+Down          exec playerctl play-pause
+# T420 function keys on other devices using hyper
+bindsym $mod+Left          exec playerctl previous
+bindsym $mod+Right         exec playerctl next
+bindsym $mod+Up            exec playerctl stop
+bindsym $mod+Down          exec playerctl play-pause
 
 ## Sway
 # Kill window
