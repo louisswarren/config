@@ -17,3 +17,4 @@ export       XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export       ZDOTDIR="$XDG_CONFIG_HOME"/zsh
 
 eval $(keychain --eval --quiet id_ed25519)
+export PYTHONPATH=/home/louis/python-packages
