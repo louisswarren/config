@@ -81,6 +81,7 @@ bindsym Shift+Print           exec grimshot --notify save screen ~/screenshot.pn
 bindsym XF86AudioRaiseVolume  exec pamixer --increase 5 --allow-boost
 bindsym XF86AudioLowerVolume  exec pamixer --decrease 5 --allow-boost
 bindsym XF86AudioMute         exec pamixer --toggle-mute
+bindsym Shift+XF86AudioMute   exec pavucontrol
 
 # T420 function keys on other devices using win
 bindsym $win+Left          exec playerctl previous
@@ -214,6 +215,7 @@ for_window [instance="floating"]  floating enable
 for_window [class="floating"]  floating enable
 for_window [class="R_x11"]  floating enable
 for_window [class="mpv" floating] border pixel 0
+for_window [app_id="pavucontrol"]  floating enable
 for_window [app_id="zoom"] floating enable
 
 for_window [class="wlfreerdp"]   move to workspace $ws8
