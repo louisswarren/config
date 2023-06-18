@@ -70,3 +70,5 @@ atexit.register(_auto_shelve_globals, set(globals().keys()))
 _auto_load_shelf()
 del _auto_shelve_globals
 del _auto_load_shelf
+
+# NOTE: Do not define anything below this section
