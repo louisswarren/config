@@ -82,6 +82,12 @@ bindsym XF86AudioRaiseVolume  exec pamixer --increase 5 --allow-boost
 bindsym XF86AudioLowerVolume  exec pamixer --decrease 5 --allow-boost
 bindsym XF86AudioMute         exec pamixer --toggle-mute
 
+# T420 function keys on other devices using win
+bindsym $win+Left          exec playerctl previous
+bindsym $win+Right         exec playerctl next
+bindsym $win+Up            exec playerctl stop
+bindsym $win+Down          exec playerctl play-pause
+
 ## Sway
 # Kill window
 bindsym $mod+Shift+q      kill
