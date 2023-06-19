@@ -49,22 +49,23 @@ import xdg.BaseDirectory
 
 def _auto_shelve_globals(globals_initial):
     keys = set(globals().keys()) - globals_initial
-    path = xdg.BaseDirectory.xdg_cache_home + '/python-interactive-shelf.db'
+    path = xdg.BaseDirectory.xdg_state_home + '/python-interactive-shelf.db'
     with shelve.open(path) as db:
         for key in db:
-            del db[key]
+            if key not in keys:
+                del db[key]
         for key in keys:
             db[key] = globals()[key]
         if keys:
-            print("Shelved", ", ".join(keys))
+            print("Shelved", ", ".join(sorted(keys)))
 
 def _auto_load_shelf():
-    path = xdg.BaseDirectory.xdg_cache_home + '/python-interactive-shelf.db'
+    path = xdg.BaseDirectory.xdg_state_home + '/python-interactive-shelf.db'
     with shelve.open(path) as db:
         for key in db:
             globals()[key] = db[key]
         if db:
-            print("Loaded", ", ".join(db))
+            print("Loaded", ", ".join(sorted(db)))
 
 atexit.register(_auto_shelve_globals, set(globals().keys()))
 _auto_load_shelf()
