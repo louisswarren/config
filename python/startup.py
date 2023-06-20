@@ -46,6 +46,7 @@ sys.displayhook = pprint.pprint
 import atexit
 import shelve
 import xdg.BaseDirectory
+import types
 
 def _auto_shelve_globals(globals_initial):
     keys = set(globals().keys()) - globals_initial
@@ -55,9 +56,13 @@ def _auto_shelve_globals(globals_initial):
             if key not in keys:
                 del db[key]
         for key in keys:
-            db[key] = globals()[key]
-        if keys:
-            print("Shelved", ", ".join(sorted(keys)))
+            if not isinstance(globals()[key], types.ModuleType):
+                try:
+                    db[key] = globals()[key]
+                except Exception as e:
+                    print(f"Failed to shelf {key}:", e)
+        if db:
+            print("Shelved", ", ".join(sorted(db)))
 
 def _auto_load_shelf():
     path = xdg.BaseDirectory.xdg_state_home + '/python-interactive-shelf.db'
