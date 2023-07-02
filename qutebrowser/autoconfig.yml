@@ -41,6 +41,10 @@ settings:
     - '{file}'
   downloads.position:
     global: bottom
+  statusbar.show:
+    global: in-mode
+  tabs.show:
+    global: multiple
   tabs.title.format:
     global: '{index}: {current_title}'
   url.searchengines:
