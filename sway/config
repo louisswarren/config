@@ -20,7 +20,7 @@ exec --no-startup-id gammastep
 
 ### Workspaces
 set $ws1  "1:internet"
-set $ws2  "2:latexpdf"
+set $ws2  "2:internet"
 set $ws3  "3:terminal"
 set $ws4  "4:terminal"
 set $ws5  "5:messages"
