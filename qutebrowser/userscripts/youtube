@@ -1,0 +1,12 @@
+#!/bin/sh
+text="${QUTE_TITLE:-$QUTE_SELECTED_TEXT}"
+notify-send -u low -a youtube "Streaming to mpv" "$text"
+
+opts=""
+if [ `uname -n` = "plato" ]; then
+	opts="--ytdl-raw-options='format=best[height<=900]'"
+elif [ `uname -n` = "turing" ]; then
+	opts="--ytdl-raw-options='format=best[height<=1200]'"
+fi
+
+mpv --script-opts=ytdl_hook-ytdl_path=yt-dlp $opts "$QUTE_URL"
