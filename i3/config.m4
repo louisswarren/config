@@ -13,8 +13,8 @@ set $mod Mod3
 set $super Mod3+Shift
 
 HOST_EULER(`
-set $leftmonitor DVI-I-0
-set $rightmonitor DP-0
+set $sidemonitor DVI-D-0
+set $monitor DP-0
 ') HOST_PLATO(`
 set $monitor LVDS1
 set $externalmonitor VGA1
@@ -290,16 +290,16 @@ exec --no-startup-id picom
 bindsym $super+w exec "qutebrowser"
 
 HOST_EULER(`
-workspace $ws1  output $leftmonitor
-workspace $ws2  output $rightmonitor
-workspace $ws3  output $leftmonitor
-workspace $ws4  output $rightmonitor
-workspace $ws5  output $leftmonitor
-workspace $ws6  output $rightmonitor
-workspace $ws7  output $leftmonitor
-workspace $ws8  output $rightmonitor
-workspace $ws9  output $leftmonitor
-workspace $ws10 output $rightmonitor
+workspace $ws1  output $monitor
+workspace $ws2  output $sidemonitor
+workspace $ws3  output $monitor
+workspace $ws4  output $sidemonitor
+workspace $ws5  output $monitor
+workspace $ws6  output $sidemonitor
+workspace $ws7  output $monitor
+workspace $ws8  output $sidemonitor
+workspace $ws9  output $monitor
+workspace $ws10 output $sidemonitor
 ')HOST_PLATO(`
 workspace $ws1  output $monitor
 workspace $ws2  output $monitor
