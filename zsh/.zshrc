@@ -59,6 +59,8 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
+alias sudoeditdiff='VISUAL=vimdiff sudoedit'
+
 # stty -ixon
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
