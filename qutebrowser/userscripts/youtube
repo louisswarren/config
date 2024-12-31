@@ -4,9 +4,9 @@ notify-send -u low -a youtube "Streaming to mpv" "$text"
 
 opts=""
 if [ `uname -n` = "plato" ]; then
-	opts="--ytdl-raw-options='format=best[height<=900]'"
+	opts="--ytdl-raw-options=format=best[height<=900]"
 elif [ `uname -n` = "turing" ]; then
-	opts="--ytdl-raw-options='format=best[height<=1200]'"
+	opts="--ytdl-raw-options=format=best[height<=1200]"
 fi
 
-mpv --script-opts=ytdl_hook-ytdl_path=yt-dlp $opts "$QUTE_URL"
+exec mpv --script-opts=ytdl_hook-ytdl_path=yt-dlp $opts "$QUTE_URL"
