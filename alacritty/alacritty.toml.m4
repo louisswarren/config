@@ -1,4 +1,3 @@
-import = ["/home/louis/.config/base16-alacritty/colors/base16-gruvbox-dark-hard.toml"]
 
 [font]
 HOST_EULER(`
@@ -21,3 +20,6 @@ style = "Oblique"
 [font.normal]
 family = "DejaVu Sans Mono"
 style = "Book"
+
+[general]
+import = ["/home/louis/.config/base16-alacritty/colors/base16-gruvbox-dark-hard.toml"]
