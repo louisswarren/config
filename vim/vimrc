@@ -97,7 +97,7 @@ set tabpagemax=20
 set scrolloff=2
 
 " Set working directory automatically
-set autochdir
+" set autochdir
 
 " Searching
 set ignorecase
