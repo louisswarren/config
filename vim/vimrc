@@ -21,7 +21,7 @@ if !has('nvim') | set viminfofile=$XDG_CACHE_HOME/vim/viminfo | endif
 call plug#begin($XDG_DATA_HOME."/vim/plugged")
 Plug 'lervag/vimtex'
 Plug 'chriskempson/base16-vim'
-Plug 'derekelkins/agda-vim'
+Plug 'victortaelin/agda-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'godlygeek/tabular'
 Plug 'nelstrom/vim-visual-star-search'
