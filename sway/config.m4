@@ -3,10 +3,22 @@ include ~/.config/base16-sway/themes/base16-gruvbox-dark-hard.config
 set $mod Mod3
 set $super Mod3+Shift
 
+HOST_EULER(`
+set $sidemonitor DVI-I-1
+set $monitor DP-0
+output $sidemonitor transform 270
+output $sidemonitor pos 0 0
+output $monitor pos 1080 0
+') HOST_TURING(`
 set $monitor eDP-1
 set $externalmonitor unknown
+')
 
+HOST_EULER(`
+font pango:DejaVu Sans Mono 10
+',`
 font pango:DejaVu Sans Mono 11
+')
 
 set $left h
 set $down j
@@ -19,6 +31,18 @@ set $term alacritty
 exec --no-startup-id gammastep
 
 ### Workspaces
+HOST_EULER(`
+set $ws1  "1:webbrowser"
+set $ws2  "2:webbrowser"
+set $ws3  "3:operations"
+set $ws4  "4:operations"
+set $ws5  "5:messengers"
+set $ws6  "6:webbrowser"
+set $ws7  "7:webbrowser"
+set $ws8  "8:extraspace"
+set $ws9  "9:background"
+set $ws10 "10:maximised"
+',`
 set $ws1  "1:internet"
 set $ws2  "2:internet"
 set $ws3  "3:terminal"
@@ -29,6 +53,7 @@ set $ws7  "7:watching"
 set $ws8  "8:watching"
 set $ws9  "9:bglisten"
 set $ws10 "10:fullmax"
+')
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -38,7 +63,7 @@ set $menu bemenu-run --nb=$base01 --nf=$base04 --sb=$base0D --sf=$base00 | xargs
 
 ### Output configuration
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg ~/christchurch1906.png fill
+output * bg ~/background.png fill
 output * scale 1
 
 ### Idle configuration
@@ -59,7 +84,7 @@ seat * hide_cursor 10000
 seat * hide_cursor when-typing enable
 
 ### Input configuration
-input "1:1:AT_Translated_Set_2_keyboard" {
+input "type:keyboard" {
 	xkb_options caps:hyper
 }
 
@@ -204,8 +229,6 @@ bindsym $mod+g   gaps inner current set 20; gaps outer current set -4
 bindsym $super+g gaps inner current set 4;  gaps outer current set 0
 bindsym $super+b gaps inner current set 0;  gaps outer current set 0
 
-#exec --no-startup-id redshift
-#exec --no-startup-id dunst
 exec --no-startup-id "while true; do alacritty --class scratch; done"
 for_window [app_id="scratch"]   move to scratchpad
 
@@ -221,6 +244,18 @@ for_window [class="wlfreerdp"]   fullscreen enable
 
 focus_follows_mouse no
 
+HOST_EULER(`
+workspace $ws1  output $sidemonitor
+workspace $ws2  output $monitor
+workspace $ws3  output $sidemonitor
+workspace $ws4  output $monitor
+workspace $ws5  output $sidemonitor
+workspace $ws6  output $monitor
+workspace $ws7  output $sidemonitor
+workspace $ws8  output $monitor
+workspace $ws9  output $sidemonitor
+workspace $ws10 output $monitor
+',`
 workspace $ws1  output $monitor
 workspace $ws2  output $monitor
 workspace $ws3  output $monitor
@@ -231,6 +266,7 @@ workspace $ws7  output $monitor
 workspace $ws8  output $externalmonitor
 workspace $ws9  output $monitor
 workspace $ws10 output $externalmonitor
+')
 
 focus_on_window_activation urgent
 

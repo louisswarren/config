@@ -18,6 +18,9 @@
 	"modules-right": [
 		"custom/arrow-pulse",
 		"pulseaudio",
+HOST_EULER(`
+		"custom/arrow-clock-date-from-pulse",
+',`
 		"custom/arrow-network",
 		"network",
 		"custom/arrow-backlight",
@@ -25,6 +28,7 @@
 		"custom/arrow-battery",
 		"battery",
 		"custom/arrow-clock-date",
+')
 		"tray",
 		"clock#date",
 		"custom/arrow-clock-time",
@@ -122,6 +126,7 @@
 	"custom/arrow-backlight":  {"format": "", "tooltip": false},
 	"custom/arrow-battery":    {"format": "", "tooltip": false},
 	"custom/arrow-clock-date": {"format": "", "tooltip": false},
+	"custom/arrow-clock-date-from-pulse": {"format": "", "tooltip": false},
 	"custom/arrow-clock-time": {"format": "", "tooltip": false},
 
 	"custom/arrow-workspaces": {"format": "", "tooltip": false},

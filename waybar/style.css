@@ -111,6 +111,7 @@
 #custom-arrow-backlight  {background: @network;   color: @backlight;}
 #custom-arrow-battery    {background: @backlight; color: @battery;}
 #custom-arrow-clock-date {background: @battery;   color: @date;   }
+#custom-arrow-clock-date-from-pulse {background: @sound;   color: @date;   }
 #custom-arrow-clock-time {background: @date;      color: @time;   }
 
 #pulseaudio { background: @sound;     color: @dark;}
