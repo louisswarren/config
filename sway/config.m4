@@ -106,6 +106,11 @@ bindsym XF86AudioLowerVolume  exec pamixer --decrease 5 --allow-boost
 bindsym XF86AudioMute         exec pamixer --toggle-mute
 bindsym Shift+XF86AudioMute   exec pavucontrol
 
+bindsym XF86AudioPrev         exec playerctl previous
+bindsym XF86AudioNext         exec playerctl next
+bindsym XF86Audiostop         exec playerctl stop
+bindsym XF86AudioPlay         exec playerctl play-pause
+
 # T420 function keys on other devices using hyper
 bindsym $mod+Left          exec playerctl previous
 bindsym $mod+Right         exec playerctl next

@@ -60,6 +60,7 @@ HOST_EULER(`
 	},
 
 	"clock#time": {
+		"timezone": "",
 		"interval": 1,
 		"format": "{:%I:%M}",
 		"tooltip-format": "{:%H:%M:%S}",

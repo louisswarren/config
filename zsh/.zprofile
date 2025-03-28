@@ -8,7 +8,7 @@ if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
 			exec sway --unsupported-gpu > sway.1.log 2> sway.2.log
 			;;
 		plato)
-			startx
+			exec sway > sway.1.log 2> sway.2.log
 			;;
 		turing)
 			exec sway > sway.1.log 2> sway.2.log
